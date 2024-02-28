@@ -1,0 +1,68 @@
+<!--
+  <form nz-form>
+  <nz-form-item [formGroup]="validateForm">
+      <nz-form-control nzErrorTip="Please input your Email!">
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input formControlName="email" placeholder="E-mail"/>
+          <ng-template #userErrorTpl left-control>
+            <ng-container *ngIf="control.hasError('required')">
+              Please input your Email ID
+            </ng-container>
+          </ng-template>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [formGroup]="validateForm" nzErrorTip="Please input your Password!">
+        <nz-input-group nzPrefixIcon="lock">
+          <input type="password" nz-input formControlName="password" placeholder="Password" id="password"/>
+          <ng-template #userErrorTpl left-control>
+            <ng-container *ngIf="control.hasError('required')">
+              Please input your password
+            </ng-container>
+          </ng-template>
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control [formGroup]="validateForm" nzErrorTip="Please enter your Username!">
+        <nz-input-group nzPrefixIcon="user">
+          <input nz-input formControlName="name" placeholder="Name"/>
+          <ng-template #userErrorTpl left-control>
+            <ng-container *ngIf="control.hasError('required')">
+              Please input your Username
+            </ng-container>
+          </ng-template>            
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="register()">Register</button>
+
+</form>
+
+-->
+
+<div class="container">
+  <form [formGroup]="validateForm">
+    <div class="mb-3 mt-3">
+      <label class="form-label" for="email">Email</label>
+      <input type="text" formControlName="email" class="form-control" id="email">
+    </div>
+    <div class="mb-3 mt-3">
+      <label class="form-label" for="name"> UserName</label>
+      <input type="text" formControlName="name" class="form-control" id="name">
+    </div>
+    <div class="mb-3 mt-3">
+      <label class="form-label" for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="password">
+    </div>
+    <div class="mb-3 mt-3">
+      <button type="button" class="btn btn-primary" (click)="register()">Register</button>
+    </div>
+  </form>
+</div>
+<div class="container mb-3 mt-3" *ngIf="posts">
+  Email:<span>{{posts.email}}</span>
+</div>

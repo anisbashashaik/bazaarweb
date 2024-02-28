@@ -1,0 +1,56 @@
+<div class="container">
+  <form [formGroup]="validateForm">
+    <div class="mb-3 mt-3">
+      <label class="form-label" for="email">Email</label>
+      <input type="text" formControlName="username" class="form-control" id="email">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <label class="form-label" for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="password">
+    </div>
+
+    <div class="mb-3 mt-3">
+      <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+    </div>
+
+  </form>
+</div>
+<!--
+    <form nz-form>
+        
+        <nz-form-item>
+            <nz-form-control [formGroup]="validateForm" nzErrorTip="Please enter your Username!">
+              <nz-input-group nzPrefixIcon="user">
+                <input nz-input formControlName="username" placeholder="Name"/>
+                <ng-template #userErrorTpl left-control>
+                  <ng-container *ngIf="control.hasError('required')">
+                    Please input your Username
+                  </ng-container>
+                </ng-template>            
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control [formGroup]="validateForm" nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password" id="password"/>
+                <ng-template #userErrorTpl left-control>
+                  <ng-container *ngIf="control.hasError('required')">
+                    Please input your password
+                  </ng-container>
+                </ng-template>
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="login()">Login</button>
+    
+          <div *ngIf="posts">
+              JWT Token:
+                <span  style="font-size: 20px;text-align: center;">{{posts.jwtToken}}                 
+                </span>
+          </div>
+      </form>
+
+ -->

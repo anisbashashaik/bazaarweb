@@ -23,6 +23,12 @@ import {NzNotificationModule} from 'ng-zorro-antd/notification';
 import { LoginComponent } from './components/login/login.component';
 import { AdminModule } from './admin/admin.module';
 import { UserModule } from './user/user.module';
+import { EmployeeListComponent } from './employee/components/employee-list/employee-list.component';
+import { EmployeeModule } from './employee/employee/employee.module';
+import { CreateEmployeeComponent } from './employee/components/create-employee/create-employee.component';
+import { UpdateEmployeeComponent } from './employee/components/update-employee/update-employee.component';
+import { EmployeeDetailsComponent } from './employee/components/employee-details/employee-details.component';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -30,7 +36,11 @@ registerLocaleData(en);
     AppComponent,
     RegisterComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    EmployeeListComponent,
+    CreateEmployeeComponent,
+    UpdateEmployeeComponent,
+    EmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,9 @@ registerLocaleData(en);
     NzSpinModule,
     NzNotificationModule,
     AdminModule,
-    UserModule
+    UserModule,
+    EmployeeModule
+    
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

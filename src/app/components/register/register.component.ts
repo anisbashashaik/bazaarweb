@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/services/auth-service/auth.service';
 })
 export class RegisterComponent implements OnInit {
   
-  title = 'Article by Jeetendra';
+  title = 'Register Component';
   posts : any;
   validateForm!: FormGroup;
   isSpinning = false;
@@ -35,13 +35,13 @@ export class RegisterComponent implements OnInit {
   }
   ngOnInit() {
     this.validateForm = this.fb.group({
-      name: [null, [Validators.required]],
-      email: [null, [Validators.email]],
+      userName: [null, [Validators.required]],
+      emailId: [null, [Validators.email]],
       password: [null, [Validators.required]]
   })}
 
   register(){
-    console.log("register:"+this.validateForm.value);
+    console.log(this.validateForm.value);
     this.authService.register(this.validateForm.value).subscribe(
 
       (response) => { this.posts = response; },

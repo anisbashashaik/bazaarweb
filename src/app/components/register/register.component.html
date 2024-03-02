@@ -47,12 +47,12 @@
 <div class="container">
   <form [formGroup]="validateForm">
     <div class="mb-3 mt-3">
-      <label class="form-label" for="email">Email</label>
-      <input type="text" formControlName="email" class="form-control" id="email">
+      <label class="form-label" for="emailId">Email</label>
+      <input type="text" formControlName="emailId" class="form-control" id="emailId">
     </div>
     <div class="mb-3 mt-3">
-      <label class="form-label" for="name"> UserName</label>
-      <input type="text" formControlName="name" class="form-control" id="name">
+      <label class="form-label" for="userName">UserName</label>
+      <input type="text" formControlName="userName" class="form-control" id="userName">
     </div>
     <div class="mb-3 mt-3">
       <label class="form-label" for="password">Password</label>
@@ -64,5 +64,5 @@
   </form>
 </div>
 <div class="container mb-3 mt-3" *ngIf="posts">
-  Email:<span>{{posts.email}}</span>
+  Email:<span>{{posts.emailId}}</span>
 </div>

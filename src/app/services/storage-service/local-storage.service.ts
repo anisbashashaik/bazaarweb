@@ -63,7 +63,7 @@ export class LocalStorageService {
     console.log("isUserLoggedIn method");
     const role : string = this.getUserRole();
     console.log("role: "+ role);
-    return role == "USER";
+    return role == "User";
 
   }
 
@@ -74,7 +74,7 @@ export class LocalStorageService {
     console.log("isAdminLoggedIn method");
     const role : string = this.getUserRole();
     console.log("role: "+ role);
-    return role == "ADMIN";
+    return role == "Admin";
   }
 
   static signOut(){

@@ -6,8 +6,11 @@ import { EmployeeListComponent } from './employee/components/employee-list/emplo
 import { CreateEmployeeComponent } from './employee/components/create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './employee/components/update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee/components/employee-details/employee-details.component';
+import { HomeComponent } from './home/home/home.component'; 
+import { FullComponent } from './layouts/full/full/full.component'; 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   {
     path: "register", component: RegisterComponent
   },
@@ -33,10 +36,18 @@ const routes: Routes = [
   },
   {
     path: "employee-details/:id", component: EmployeeDetailsComponent
-  }
+  },
   /*{
     path : '', redirectTo: 'employees', pathMatch : 'full'
   }*/
+  {
+    path: 'cafe', component: FullComponent,
+    children: [
+
+    ]
+  },
+  { path: '**', component: HomeComponent }
+
 ];
 
 @NgModule({

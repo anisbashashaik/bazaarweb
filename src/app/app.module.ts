@@ -28,6 +28,13 @@ import { EmployeeModule } from './employee/employee/employee.module';
 import { CreateEmployeeComponent } from './employee/components/create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './employee/components/update-employee/update-employee.component';
 import { EmployeeDetailsComponent } from './employee/components/employee-details/employee-details.component';
+import { HomeComponent } from './home/home/home.component';
+import { FullComponent } from './layouts/full/full/full.component';
+import { HeaderComponent } from './layouts/full/full/header/header.component';
+import { SidebarComponent } from './layouts/full/full/sidebar/sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { BestSellerComponent } from './best-seller/best-seller.component';
+import { ViewBillProductsComponent } from './material-component/dialog/view-bill-products/view-bill-products.component';
 
 registerLocaleData(en);
 
@@ -40,7 +47,14 @@ registerLocaleData(en);
     EmployeeListComponent,
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
-    EmployeeDetailsComponent
+    EmployeeDetailsComponent,
+    HomeComponent,
+    FullComponent,
+    HeaderComponent,
+    SidebarComponent,
+    DashboardComponent,
+    BestSellerComponent,
+    ViewBillProductsComponent
   ],
   imports: [
     BrowserModule,
